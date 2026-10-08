@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
+import { AuthProvider } from "@/lib/AuthContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "VoxClone — Voice Studio",
-  description: "Voice cloning powered by VoxCPM.",
+  title: "Next Aura — Voice Studio",
+  description: "AI Voice Cloning & Natural Speech Synthesis powered by VoxCPM.",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   );
 }
+

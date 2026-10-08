@@ -1,1 +1,1272 @@
-*{box-sizing:border-box}body{margin:0;background:#fff;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer}.nav{height:76px;border-bottom:1px solid #e9e9e9;display:flex;align-items:center;justify-content:space-between;padding:0 6vw}.brand{display:flex;align-items:center;gap:11px}.mark{width:32px;height:32px;background:#000;color:#fff;border-radius:8px;display:grid;place-items:center;font-weight:800}.brand b{display:block;font-size:15px}.brand small{font-size:8px;letter-spacing:2px;color:#777}.navActions{display:flex;align-items:center;gap:16px}.planPill{font-size:12px;border:1px solid #ddd;border-radius:999px;padding:8px 12px}.hero{text-align:center;padding:92px 20px 70px}.eyebrow{font-size:10px;letter-spacing:3px;font-weight:800;color:#777;margin:0 0 18px}.hero h1{font-size:clamp(48px,7vw,92px);line-height:.94;letter-spacing:-5px;margin:0;font-weight:800}.hero h1 i{font-weight:400}.sub{max-width:570px;margin:25px auto 0;color:#666;line-height:1.6;font-size:16px}.studio{max-width:1120px;margin:0 auto;padding:0 20px 100px;display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.stepCard{border:1px solid #dedede;border-radius:22px;padding:28px;background:#fff}.mainCard{box-shadow:0 20px 60px #0000000d}.step{font-size:10px;letter-spacing:2px;font-weight:800;color:#888;margin-bottom:22px}.stepCard h2{font-size:23px;margin:0 0 7px}.muted{color:#777;font-size:13px;line-height:1.5}.upload{margin:25px 0;border:1.5px dashed #cfcfcf;border-radius:16px;padding:38px 20px;text-align:center;display:flex;flex-direction:column;gap:7px;transition:.2s}.upload:hover{border-color:#000}.uploadIcon{font-size:28px;font-weight:300}.upload span{font-size:11px;color:#999}.check{display:flex;gap:10px;align-items:flex-start;margin-top:25px;font-size:13px}.check input{accent-color:#000;margin-top:3px}.check span{display:flex;flex-direction:column;gap:4px}.check small{color:#888}.input{width:100%;border:1px solid #ddd;border-radius:10px;padding:13px 14px;outline:none;margin-top:12px;background:#fff}.input:focus{border-color:#000}.scriptHead{display:flex;justify-content:space-between;align-items:flex-start}.counter{font-size:11px;color:#777;border:1px solid #ddd;border-radius:999px;padding:7px 10px}.counter.bad{color:#fff;background:#000;border-color:#000}.mainCard textarea{width:100%;height:330px;resize:vertical;border:0;border-top:1px solid #eee;margin-top:22px;padding:20px 0;outline:none;font-size:17px;line-height:1.7}.generateRow{border-top:1px solid #eee;padding-top:17px;display:flex;justify-content:space-between;align-items:center;gap:15px}.usage{font-size:11px;color:#888}.blackBtn{border:0;background:#000;color:#fff;border-radius:10px;padding:14px 20px;font-weight:700}.blackBtn:hover{background:#222}.blackBtn:disabled{opacity:.4;cursor:not-allowed}.blackBtn.small{padding:10px 16px}.full{width:100%}.textBtn,.switch{background:none;border:0;color:#555;font-size:13px}.error{margin-top:15px;background:#f4f4f4;border-left:3px solid #000;padding:11px;font-size:12px}.result{margin-top:20px;border-top:1px solid #eee;padding-top:18px;display:grid;gap:10px}.result audio{width:100%}.result a{color:#000;font-size:12px;font-weight:700}.pricing{border-top:1px solid #eee;background:#fafafa;padding:90px 6vw}.sectionIntro{text-align:center;margin-bottom:40px}.sectionIntro h2{font-size:42px;letter-spacing:-2px;margin:0}.sectionIntro p:last-child{color:#777}.plans{max-width:1050px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.plan{background:#fff;border:1px solid #ddd;border-radius:20px;padding:30px;min-height:340px;position:relative}.plan.featured{border:2px solid #000}.planTag{height:14px;display:block;font-size:8px;letter-spacing:2px;font-weight:800}.plan h3{font-size:21px;margin:12px 0}.plan strong{font-size:30px;letter-spacing:-1px}.plan ul{padding:20px 0;margin:0;list-style:none;border-top:1px solid #eee;margin-top:20px}.plan li{font-size:13px;color:#666;padding:6px 0}.outlineBtn{background:#fff;border:1px solid #bbb;border-radius:10px;padding:13px 18px;width:100%}.modalBack{position:fixed;inset:0;background:#0008;display:grid;place-items:center;padding:20px;z-index:10}.modal{background:#fff;border-radius:20px;width:min(430px,100%);padding:30px;position:relative;box-shadow:0 30px 100px #0004}.modal h2{font-size:30px;letter-spacing:-1px;margin:0 0 8px}.close{position:absolute;right:18px;top:14px;border:0;background:none;font-size:25px}.modal .blackBtn{margin-top:15px}.switch{width:100%;margin-top:15px}@media(max-width:800px){.studio,.plans{grid-template-columns:1fr}.hero{padding-top:65px}.hero h1{letter-spacing:-3px}.nav{padding:0 20px}.studio{padding-bottom:60px}.pricing{padding:65px 20px}}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Nav */
+.nav {
+  height: 76px;
+  border-bottom: 1px solid #e9e9e9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6vw;
+}
+
+.brandLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.mark {
+  width: 32px;
+  height: 32px;
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.brand b {
+  display: block;
+  font-size: 15px;
+  letter-spacing: -0.2px;
+}
+
+.brand small {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #777;
+  font-weight: 700;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navPillBtn {
+  background: #000000;
+  color: #ffffff;
+  border-radius: 9999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: none;
+  box-shadow: none;
+  transition: background 0.15s ease;
+  cursor: pointer;
+}
+
+.navPillBtn:hover {
+  background: #262626;
+  color: #ffffff;
+}
+
+.planPill {
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.userNavSection, .guestNavSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.userEmail {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.proBadge {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.freeBadge {
+  background: #f3f3f3;
+  color: #666;
+  border: 1px solid #ddd;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.navExpiry {
+  font-size: 11px;
+  color: #666;
+  background: #f9f9f9;
+  padding: 5px 9px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  font-weight: 500;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: #777;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(44px, 6.5vw, 84px);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  margin: 0;
+  font-weight: 800;
+}
+
+.hero h1 i {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.sub {
+  max-width: 580px;
+  margin: 22px auto 0;
+  color: #666;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Studio Grid */
+.studio {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 20px;
+}
+
+@media (max-width: 860px) {
+  .studio {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stepCard {
+  border: 1px solid #dedede;
+  border-radius: 20px;
+  padding: 28px;
+  background: #fff;
+}
+
+.mainCard {
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.04);
+}
+
+.step {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.stepCard h2 {
+  font-size: 22px;
+  margin: 0 0 6px;
+  letter-spacing: -0.4px;
+}
+
+.muted {
+  color: #777;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.upload {
+  margin: 22px 0;
+  border: 1.5px dashed #cfcfcf;
+  border-radius: 16px;
+  padding: 34px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.upload:hover, .uploadDragging {
+  border-color: #000;
+  background: #fafafa;
+}
+
+.uploadIcon {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.upload span {
+  font-size: 11px;
+  color: #888;
+}
+
+.uploadedAudioCard {
+  margin: 22px 0;
+  border: 1px solid #d4d4d4;
+  border-radius: 16px;
+  padding: 18px;
+  background: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.uploadedAudioHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.uploadedAudioInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.uploadedAudioLabel {
+  font-size: 9.5px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.uploadedAudioName {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.uploadedAudioMeta {
+  font-size: 11px;
+  color: #777;
+}
+
+.uploadedAudioBadge {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: #000;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.uploadedAudioPlayerWrapper {
+  width: 100%;
+}
+
+.uploadedAudioPlayer {
+  width: 100%;
+  height: 38px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.uploadedAudioActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 6px;
+  border-top: 1px solid #eee;
+}
+
+.audioActionBtn {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #222;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.audioActionBtn:hover {
+  border-color: #000;
+  background: #f5f5f5;
+}
+
+.audioRemoveBtn {
+  background: none;
+  border: none;
+  color: #b91c1c;
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 8px;
+  text-decoration: underline;
+}
+
+.check {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 22px;
+  font-size: 13px;
+}
+
+.check input {
+  accent-color: #000;
+  margin-top: 3px;
+}
+
+.check span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.check small {
+  color: #888;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px 14px;
+  outline: none;
+  margin-top: 6px;
+  background: #fff;
+}
+
+.input:focus {
+  border-color: #000;
+}
+
+.fidelityHint {
+  display: block;
+  font-size: 11px;
+  color: #666;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.fidelitySettingsBox {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+.fidelityToggleBtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.fidelityToggleBtn:hover {
+  background: #f0f0f0;
+}
+
+.fidelityControlsPanel {
+  padding: 12px 14px;
+  border-top: 1px solid #eaeaea;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fidelityOptionRow .check.small {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+.fidelityOptionRow .check.small small {
+  font-size: 10.5px;
+  line-height: 1.35;
+}
+
+.fidelitySliderRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 4px;
+  border-top: 1px dashed #eee;
+}
+
+.fidelitySliderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+}
+
+.fidelitySliderTitle {
+  font-weight: 700;
+  color: #222;
+}
+
+.fidelitySliderDesc {
+  font-size: 10.5px;
+  color: #666;
+}
+
+.scriptHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.counter {
+  font-size: 11px;
+  color: #777;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.counter.bad {
+  color: #fff;
+  background: #000;
+  border-color: #000;
+}
+
+.mainCard textarea {
+  width: 100%;
+  height: 280px;
+  resize: vertical;
+  border: 0;
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+  padding: 18px 0;
+  outline: none;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.generateRow {
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.usage {
+  font-size: 11px;
+  color: #888;
+}
+
+.blackBtn {
+  border: 0;
+  background: #000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 13px 20px;
+  font-weight: 700;
+  font-size: 13.5px;
+  transition: background 0.15s;
+}
+
+.blackBtn:hover {
+  background: #222;
+}
+
+.blackBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.blackBtn.small {
+  padding: 8px 14px;
+  font-size: 12px;
+}
+
+.full {
+  width: 100%;
+}
+
+.textBtn, .switch {
+  background: none;
+  border: 0;
+  color: #555;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.textBtn:hover, .switch:hover {
+  color: #000;
+}
+
+.error {
+  margin-top: 15px;
+  background: #fdf2f2;
+  border-left: 3px solid #b91c1c;
+  color: #991b1b;
+  padding: 12px 14px;
+  font-size: 12.5px;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Original Generated Audio Output Box inside Step 02 */
+.originalOutputBox {
+  margin-top: 22px;
+  border-top: 1px solid #eaeaea;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.originalOutputHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.outputBadge {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  color: #888;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.originalOutputHeader h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.downloadPill {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #fff;
+  transition: all 0.2s;
+}
+
+.downloadPill:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.originalAudioPlayer {
+  width: 100%;
+  height: 42px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.effectsPromptRow {
+  background: #f9f9f9;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 11.5px;
+  color: #555;
+  flex-wrap: wrap;
+}
+
+.jumpToEffectsBtn {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.jumpToEffectsBtn:hover {
+  background: #222;
+}
+
+/* ==========================================================================
+   DEDICATED VOICE EFFECTS PANEL (STANDALONE BOX BELOW STUDIO GRID)
+   ========================================================================== */
+
+.voiceEffectsSection {
+  max-width: 1140px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
+}
+
+.voiceEffectsContainer {
+  background: #fff;
+  border: 1.5px solid #000;
+  border-radius: 24px;
+  padding: 36px 32px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.voiceEffectsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 22px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.voiceEffectsTitleGroup h2 {
+  font-size: clamp(26px, 3.5vw, 36px);
+  margin: 0 0 6px;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  color: #000;
+}
+
+.voiceEffectsSubtitle {
+  font-size: 14.5px;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.voiceEffectsBadge {
+  background: #000;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.voiceEffectsBadge span {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.voiceEffectsBadge small {
+  font-size: 9.5px;
+  color: #ccc;
+  letter-spacing: 0.3px;
+}
+
+/* Dual Audio Player & Comparison Card */
+.voiceEffectsPlayerCard {
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dualTabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dualTab {
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #444;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.dualTab:hover {
+  border-color: #000;
+}
+
+.dualTab.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.tabBadge {
+  font-size: 9.5px;
+  background: #eee;
+  color: #666;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.dualTab.active .tabBadge {
+  background: #262626;
+  color: #fff;
+}
+
+.tabBadge.activeBadge {
+  background: #fff;
+  color: #000;
+}
+
+.activePlayerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.playerMetaBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.playerTrackInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.playerTrackInfo b {
+  font-size: 13.5px;
+  color: #111;
+}
+
+.playerFormatTag {
+  font-size: 11px;
+  color: #777;
+  background: #eee;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.compareToggleBtn {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #111;
+  transition: all 0.2s;
+}
+
+.compareToggleBtn:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.audioPlayerWrapper {
+  width: 100%;
+}
+
+.primaryAudioEl {
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.playerFooterRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.downloadBtn {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 7px 14px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.downloadBtn:hover {
+  border-color: #000;
+  background: #000;
+  color: #fff;
+}
+
+.downloadBtn.highlight {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.downloadBtn.highlight:hover {
+  background: #262626;
+}
+
+.statusSuccessPill {
+  font-size: 11.5px;
+  color: #065f46;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.statusErrorPill {
+  font-size: 11.5px;
+  color: #991b1b;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Category Filter Tabs */
+.presetsExplorer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.categoryFilterRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.categoryFilterLabel {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.categoryTabsScroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+
+.categoryFilterBtn {
+  background: #f4f4f4;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  padding: 8px 15px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #444;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.categoryFilterBtn:hover {
+  background: #eaeaea;
+  color: #000;
+}
+
+.categoryFilterBtn.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* Presets Grid */
+.effectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 14px;
+  max-height: 440px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.effectCard {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 16px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.effectCard:hover {
+  border-color: #999;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.effectCard.selected {
+  border: 2px solid #000;
+  background: #fafafa;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.effectCard.applied {
+  border-color: #000;
+}
+
+.effectCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.effectEmoji {
+  font-size: 20px;
+}
+
+.effectBadge {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 800;
+  color: #777;
+  background: #f0f0f0;
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+
+.effectBadge.appliedBadge {
+  background: #000;
+  color: #fff;
+}
+
+.effectTitle {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #0a0a0a;
+  margin-top: 4px;
+  letter-spacing: -0.2px;
+}
+
+.effectMyanmar {
+  font-size: 12px;
+  color: #555;
+  font-weight: 600;
+}
+
+.effectDescription {
+  font-size: 11.5px;
+  color: #777;
+  line-height: 1.4;
+  margin: 4px 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Selected Preset Configuration & Intensity Panel */
+.effectConfigPanel {
+  background: #000;
+  color: #fff;
+  border-radius: 18px;
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .effectConfigPanel {
+    grid-template-columns: 1fr;
+  }
+}
+
+.configLeft {
+  display: flex;
+  align-items: center;
+}
+
+.selectedEffectInfo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.selectedEmoji {
+  font-size: 32px;
+  background: #1a1a1a;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+}
+
+.selectedEffectName b {
+  font-size: 16px;
+  display: block;
+  letter-spacing: -0.3px;
+}
+
+.selectedEffectName span {
+  font-size: 12.5px;
+  color: #bbb;
+  font-weight: 500;
+}
+
+.selectedEffectDesc {
+  font-size: 11px;
+  color: #888;
+  margin: 4px 0 0;
+  line-height: 1.35;
+}
+
+.configMiddle {
+  display: flex;
+  flex-direction: column;
+}
+
+.intensityControl {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.intensityHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intensityTitle {
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.intensityHint {
+  font-size: 11px;
+  color: #bbb;
+  font-weight: 500;
+}
+
+.customSlider {
+  width: 100%;
+  accent-color: #fff;
+  cursor: pointer;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.configRight {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.applyEffectBtn {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.applyEffectBtn:hover {
+  background: #eee;
+  transform: translateY(-1px);
+}
+
+.applyEffectBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.resetBtn {
+  background: none;
+  border: 1px solid #444;
+  color: #ccc;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.resetBtn:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Modal */
+.modalBack {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  width: min(440px, 100%);
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.25);
+}
+
+.modal h2 {
+  font-size: 28px;
+  letter-spacing: -1px;
+  margin: 0 0 8px;
+}
+
+.close {
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  border: 0;
+  background: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: #777;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.modal .blackBtn {
+  margin-top: 15px;
+}
+
+.switch {
+  width: 100%;
+  margin-top: 15px;
+}
